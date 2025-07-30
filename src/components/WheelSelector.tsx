@@ -131,7 +131,10 @@ export default function WheelSelector() {
       {/* Résultats */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredWheels.map((wheel) => (
-          <div key={wheel.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div
+            key={wheel.id}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp"
+          >
             <div className={`h-32 ${wheel.color} flex items-center justify-center`}>
               <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
                 <div className="w-16 h-16 bg-white rounded-full shadow-lg"></div>

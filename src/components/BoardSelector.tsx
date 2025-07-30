@@ -124,7 +124,10 @@ export default function BoardSelector() {
       {/* Résultats */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredBoards.map((board) => (
-          <div key={board.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div
+            key={board.id}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp"
+          >
             <div className="aspect-w-16 aspect-h-9 bg-gray-200">
               <img 
                 src={board.image} 

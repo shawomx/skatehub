@@ -129,7 +129,10 @@ export default function Community() {
 
           {/* Posts */}
           {posts.map((post) => (
-            <div key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div
+              key={post.id}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp"
+            >
               <div className="p-6">
                 <div className="flex items-center space-x-3 mb-4">
                   <img 
@@ -190,7 +193,10 @@ export default function Community() {
             
             <div className="space-y-4">
               {events.map((event) => (
-                <div key={event.id} className="border border-gray-200 rounded-lg p-4 hover:border-orange-300 transition-colors duration-200">
+                <div
+                  key={event.id}
+                  className="border border-gray-200 rounded-lg p-4 hover:border-orange-300 transition-colors duration-200 animate-fadeInUp"
+                >
                   <div className="flex items-center space-x-2 mb-2">
                     <span className="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full">
                       {event.type}

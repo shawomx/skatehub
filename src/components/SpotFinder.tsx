@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Star, Clock, Users, Wifi, Car } from 'lucide-react';
+import { MapPin, Star, Clock, Users } from 'lucide-react';
 
 interface Spot {
   id: string;
@@ -132,7 +132,10 @@ export default function SpotFinder() {
       {/* Liste des spots */}
       <div className="space-y-6">
         {filteredSpots.map((spot) => (
-          <div key={spot.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div
+            key={spot.id}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp"
+          >
             <div className="md:flex">
               <div className="md:w-1/3">
                 <img 

@@ -36,9 +36,10 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
               <button
                 key={id}
                 onClick={() => setActiveSection(id)}
+                aria-current={activeSection === id ? 'page' : undefined}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
                   activeSection === id
-                    ? 'bg-orange-500 text-white'
+                    ? 'bg-orange-500 text-white ring-2 ring-orange-400'
                     : 'text-gray-300 hover:text-white hover:bg-gray-800'
                 }`}
               >
@@ -63,13 +64,14 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
             {navItems.map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
+                aria-current={activeSection === id ? 'page' : undefined}
                 onClick={() => {
                   setActiveSection(id);
                   setIsMenuOpen(false);
                 }}
                 className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg transition-all duration-200 ${
                   activeSection === id
-                    ? 'bg-orange-500 text-white'
+                    ? 'bg-orange-500 text-white ring-2 ring-orange-400'
                     : 'text-gray-300 hover:text-white hover:bg-gray-800'
                 }`}
               >
