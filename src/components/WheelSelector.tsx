@@ -59,8 +59,8 @@ export default function WheelSelector() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Choisis tes roues parfaites</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-4">Choisis tes roues parfaites</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           La taille et la dureté de tes roues déterminent ton style de ride
         </p>
       </div>

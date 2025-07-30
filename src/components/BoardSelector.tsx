@@ -11,6 +11,7 @@ interface Board {
   image: string;
   features: string[];
   rating: number;
+  url: string;
 }
 
 export default function BoardSelector() {
@@ -21,36 +22,39 @@ export default function BoardSelector() {
   const boards: Board[] = [
     {
       id: '1',
-      name: 'Street Master Pro',
+      name: 'Santa Cruz Screaming Hand',
       size: '8.0"',
       style: 'street',
       level: 'intermediate',
-      price: '89€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['7 plis d\'érable', 'Concave moyen', 'Pop excellent'],
-      rating: 4.8
+      price: '99€',
+      image: 'https://images.unsplash.com/photo-1587049352854-fc88bbf7f735?auto=format&fit=crop&w=800&q=60',
+      features: ['7 plis d\'érable', 'Concave moyen', 'Design mythique'],
+      rating: 4.8,
+      url: 'https://www.santacruzskateboards.com/products/screaming-hand-complete'
     },
     {
       id: '2',
-      name: 'Cruiser Paradise',
-      size: '8.75"',
-      style: 'cruiser',
+      name: 'Element Section',
+      size: '8.25"',
+      style: 'street',
       level: 'beginner',
-      price: '65€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['Roues souples', 'Roulements ABEC-7', 'Design rétro'],
-      rating: 4.5
+      price: '89€',
+      image: 'https://images.unsplash.com/photo-1623176997249-2c720b0e96cb?auto=format&fit=crop&w=800&q=60',
+      features: ['Construction Featherlight', 'Grip Element', 'Roulements ABEC-7'],
+      rating: 4.6,
+      url: 'https://www.elementbrand.com/products/section-complete'
     },
     {
       id: '3',
-      name: 'Vert Destroyer',
+      name: 'Girl Biebel OG',
       size: '8.5"',
       style: 'vert',
       level: 'advanced',
       price: '120€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['Shape classique', 'Concave profond', 'Nose & tail longs'],
-      rating: 4.9
+      image: 'https://images.unsplash.com/photo-1527563715129-c73d4bd9a646?auto=format&fit=crop&w=800&q=60',
+      features: ['Shape classique Girl', 'Concave profond', 'Nose & tail larges'],
+      rating: 4.9,
+      url: 'https://crailtap.com/products/girl-biebel-og-8-5-complete'
     }
   ];
 
@@ -65,8 +69,8 @@ export default function BoardSelector() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Trouve ta planche parfaite</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-4">Trouve ta planche parfaite</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           Réponds à quelques questions et découvre la planche qui correspond à ton style et ton niveau
         </p>
       </div>
@@ -160,9 +164,14 @@ export default function BoardSelector() {
 
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-bold text-orange-500">{board.price}</span>
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
-                  Choisir
-                </button>
+                <a
+                  href={board.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Acheter
+                </a>
               </div>
             </div>
           </div>

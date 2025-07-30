@@ -25,7 +25,7 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
             <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">S</span>
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold font-brand bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               SkateHub
             </h1>
           </div>

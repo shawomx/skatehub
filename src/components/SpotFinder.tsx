@@ -12,6 +12,7 @@ interface Spot {
   openTime: string;
   image: string;
   distance: string;
+  mapsUrl: string;
 }
 
 export default function SpotFinder() {
@@ -28,8 +29,9 @@ export default function SpotFinder() {
       rating: 4.7,
       features: ['Bowl', 'Street course', 'Éclairage', 'Parking'],
       openTime: '8h - 22h',
-      image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '2.3 km'
+      image: 'https://images.unsplash.com/photo-1503342394122-9f0c8f95430d?auto=format&fit=crop&w=800&q=60',
+      distance: '2.3 km',
+      mapsUrl: 'https://goo.gl/maps/3YpX5Kvs1qL2'
     },
     {
       id: '2',
@@ -40,8 +42,9 @@ export default function SpotFinder() {
       rating: 4.2,
       features: ['Marches', 'Rails', 'Ledges', 'Plaza'],
       openTime: '24h/24',
-      image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '4.1 km'
+      image: 'https://images.unsplash.com/photo-1558981280-bc7fbf65fc1d?auto=format&fit=crop&w=800&q=60',
+      distance: '4.1 km',
+      mapsUrl: 'https://goo.gl/maps/Kr6ZHbBeE622'
     },
     {
       id: '3',
@@ -52,8 +55,9 @@ export default function SpotFinder() {
       rating: 4.9,
       features: ['Bowl profond', 'Transitions', 'Coping', 'Vestiaires'],
       openTime: '9h - 19h',
-      image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '6.7 km'
+      image: 'https://images.unsplash.com/photo-1521401830884-6c03d4b8fa61?auto=format&fit=crop&w=800&q=60',
+      distance: '6.7 km',
+      mapsUrl: 'https://goo.gl/maps/pwYrAoey4zT2'
     }
   ];
 
@@ -76,8 +80,8 @@ export default function SpotFinder() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Découvre les meilleurs spots</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-4">Découvre les meilleurs spots</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           Trouve les spots de skate près de chez toi, avec infos pratiques et avis de la communauté
         </p>
       </div>
@@ -185,10 +189,15 @@ export default function SpotFinder() {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
-                    <button className="flex items-center space-x-2 text-blue-500 hover:text-blue-600">
+                    <a
+                      href={spot.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
+                    >
                       <MapPin className="h-4 w-4" />
                       <span>Itinéraire</span>
-                    </button>
+                    </a>
                     <button className="flex items-center space-x-2 text-gray-500 hover:text-gray-600">
                       <Users className="h-4 w-4" />
                       <span>Avis (23)</span>

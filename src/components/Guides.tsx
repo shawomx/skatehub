@@ -67,8 +67,8 @@ export default function Guides() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Guides et astuces</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-4">Guides et astuces</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           Apprends avec les meilleurs guides et conseils de la communauté skate
         </p>
       </div>
