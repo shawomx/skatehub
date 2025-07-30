@@ -69,8 +69,8 @@ export default function BoardSelector() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Trouve ta planche parfaite</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-4">Trouve ta planche parfaite</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           Réponds à quelques questions et découvre la planche qui correspond à ton style et ton niveau
         </p>
       </div>
