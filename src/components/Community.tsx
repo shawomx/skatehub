@@ -88,8 +88,8 @@ export default function Community() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Communauté SkateHub</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-white mb-4">Communauté SkateHub</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           Connecte-toi avec d'autres skaters, partage tes sessions et participe aux événements
         </p>
       </div>
