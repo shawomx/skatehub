@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Video, Users, Trophy } from 'lucide-react';
+import { BookOpen, Video, Trophy } from 'lucide-react';
 
 interface Guide {
   id: string;
@@ -76,7 +76,10 @@ export default function Guides() {
       {/* Guides principaux */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {guides.map((guide) => (
-          <div key={guide.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div
+            key={guide.id}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp"
+          >
             <div className="aspect-w-16 aspect-h-9 bg-gray-200">
               <img 
                 src={guide.image} 
@@ -113,7 +116,10 @@ export default function Guides() {
         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">💡 Astuces du jour</h3>
         <div className="grid md:grid-cols-3 gap-6">
           {tips.map((tip, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
+            <div
+              key={index}
+              className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
+            >
               <div className="flex items-center space-x-2 mb-3">
                 <span className="bg-orange-100 text-orange-500 text-xs font-medium px-3 py-1 rounded-full">
                   {tip.category}
@@ -135,7 +141,7 @@ export default function Guides() {
         </div>
         
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors duration-200 cursor-pointer animate-fadeInUp">
             <div className="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
               <Video className="h-12 w-12 text-gray-500" />
             </div>
@@ -143,7 +149,7 @@ export default function Guides() {
             <p className="text-gray-400 text-sm">Découvre les tricks essentiels pour débuter en street</p>
           </div>
           
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
+          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors duration-200 cursor-pointer animate-fadeInUp">
             <div className="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
               <Video className="h-12 w-12 text-gray-500" />
             </div>

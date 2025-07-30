@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import BoardSelector from './components/BoardSelector';
 import WheelSelector from './components/WheelSelector';
@@ -8,6 +8,10 @@ import Community from './components/Community';
 
 function App() {
   const [activeSection, setActiveSection] = useState('boards');
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeSection]);
 
   const renderSection = () => {
     switch (activeSection) {
