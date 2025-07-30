@@ -12,6 +12,7 @@ interface Spot {
   openTime: string;
   image: string;
   distance: string;
+  link: string;
 }
 
 export default function SpotFinder() {
@@ -29,7 +30,8 @@ export default function SpotFinder() {
       features: ['Bowl', 'Street course', 'Éclairage', 'Parking'],
       openTime: '8h - 22h',
       image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '2.3 km'
+      distance: '2.3 km',
+      link: 'https://maps.google.com/?q=Skatepark+Republique+Paris'
     },
     {
       id: '2',
@@ -41,7 +43,8 @@ export default function SpotFinder() {
       features: ['Marches', 'Rails', 'Ledges', 'Plaza'],
       openTime: '24h/24',
       image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '4.1 km'
+      distance: '4.1 km',
+      link: 'https://maps.google.com/?q=Esplanade+des+Invalides+Paris'
     },
     {
       id: '3',
@@ -53,7 +56,8 @@ export default function SpotFinder() {
       features: ['Bowl profond', 'Transitions', 'Coping', 'Vestiaires'],
       openTime: '9h - 19h',
       image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '6.7 km'
+      distance: '6.7 km',
+      link: 'https://maps.google.com/?q=Bowl+de+Bercy+Paris'
     }
   ];
 
@@ -185,18 +189,28 @@ export default function SpotFinder() {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
-                    <button className="flex items-center space-x-2 text-blue-500 hover:text-blue-600">
+                    <a
+                      href={spot.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
+                    >
                       <MapPin className="h-4 w-4" />
                       <span>Itinéraire</span>
-                    </button>
+                    </a>
                     <button className="flex items-center space-x-2 text-gray-500 hover:text-gray-600">
                       <Users className="h-4 w-4" />
                       <span>Avis (23)</span>
                     </button>
                   </div>
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
+                  <a
+                    href={spot.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+                  >
                     Voir les détails
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

@@ -11,6 +11,7 @@ interface Board {
   image: string;
   features: string[];
   rating: number;
+  link: string;
 }
 
 export default function BoardSelector() {
@@ -21,36 +22,51 @@ export default function BoardSelector() {
   const boards: Board[] = [
     {
       id: '1',
-      name: 'Street Master Pro',
-      size: '8.0"',
+      name: 'Element Section 7.75" Complete',
+      size: '7.75"',
       style: 'street',
-      level: 'intermediate',
-      price: '89€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['7 plis d\'érable', 'Concave moyen', 'Pop excellent'],
-      rating: 4.8
+      level: 'beginner',
+      price: '99€',
+      image: 'https://images.pexels.com/photos/277553/pexels-photo-277553.jpeg?auto=compress&cs=tinysrgb&w=600',
+      features: ['Planche Element', 'Montage complet', 'Roues 52mm'],
+      rating: 4.7,
+      link: 'https://www.skatedeluxe.com/en/element-section-complete-skateboard-7-75-p-132126.html'
     },
     {
       id: '2',
-      name: 'Cruiser Paradise',
-      size: '8.75"',
-      style: 'cruiser',
-      level: 'beginner',
-      price: '65€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['Roues souples', 'Roulements ABEC-7', 'Design rétro'],
-      rating: 4.5
+      name: 'Santa Cruz Screaming Hand 8.25" Deck',
+      size: '8.25"',
+      style: 'street',
+      level: 'intermediate',
+      price: '79€',
+      image: 'https://images.pexels.com/photos/51364/skateboard-skateboarder-sport-skater-51364.jpeg?auto=compress&cs=tinysrgb&w=600',
+      features: ['7 plis d\'érable', 'Concave medium', 'Screaming Hand'],
+      rating: 4.8,
+      link: 'https://www.santacruzskateboards.com/products/screaming-hand-8-25-deck'
     },
     {
       id: '3',
-      name: 'Vert Destroyer',
+      name: 'Arbor Pilsner Flagship Complete',
+      size: '8.4"',
+      style: 'cruiser',
+      level: 'all',
+      price: '159€',
+      image: 'https://images.pexels.com/photos/606838/pexels-photo-606838.jpeg?auto=compress&cs=tinysrgb&w=600',
+      features: ['Roues molles 61mm', 'Shape compact', 'Trucks Paris'],
+      rating: 4.9,
+      link: 'https://www.skatedeluxe.com/en/arbor-pilsner-flagship-complete-p-145678.html'
+    },
+    {
+      id: '4',
+      name: 'Baker Brand Logo 8.5" Deck',
       size: '8.5"',
-      style: 'vert',
+      style: 'street',
       level: 'advanced',
-      price: '120€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['Shape classique', 'Concave profond', 'Nose & tail longs'],
-      rating: 4.9
+      price: '85€',
+      image: 'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&w=600',
+      features: ['Shape OG', 'Concave profond', 'Logo classique'],
+      rating: 4.6,
+      link: 'https://www.skatewarehouse.com/Baker_Brand_Logo_8_5_Deck/descpage-BKBLG85.html'
     }
   ];
 
@@ -160,9 +176,14 @@ export default function BoardSelector() {
 
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-bold text-orange-500">{board.price}</span>
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
-                  Choisir
-                </button>
+                <a
+                  href={board.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Acheter
+                </a>
               </div>
             </div>
           </div>

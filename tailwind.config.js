@@ -11,6 +11,10 @@ export default {
       },
       animation: {
         fadeInUp: 'fadeInUp 0.5s ease-out'
+      },
+      fontFamily: {
+        headline: ['"Bebas Neue"', 'cursive'],
+        body: ['Roboto', 'sans-serif']
       }
     },
   },
