@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-neutral-900 text-gray-100">
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -47,7 +47,7 @@ function App() {
                 <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold">S</span>
                 </div>
-                <h3 className="text-xl font-bold">SkateHub</h3>
+                <h3 className="text-xl font-bold font-brand">SkateHub</h3>
               </div>
               <p className="text-gray-400">
                 Ta plateforme ultime pour tout ce qui concerne le skateboard.
