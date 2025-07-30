@@ -22,10 +22,10 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">S</span>
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent font-brand">
               SkateHub
             </h1>
           </div>
@@ -39,7 +39,7 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
                 aria-current={activeSection === id ? 'page' : undefined}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
                   activeSection === id
-                    ? 'bg-orange-500 text-white ring-2 ring-orange-400'
+                    ? 'bg-red-600 text-white ring-2 ring-red-400'
                     : 'text-gray-300 hover:text-white hover:bg-gray-800'
                 }`}
               >
@@ -71,7 +71,7 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
                 }}
                 className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg transition-all duration-200 ${
                   activeSection === id
-                    ? 'bg-orange-500 text-white ring-2 ring-orange-400'
+                    ? 'bg-red-600 text-white ring-2 ring-red-400'
                     : 'text-gray-300 hover:text-white hover:bg-gray-800'
                 }`}
               >

@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        brand: ['"Bebas Neue"', 'sans-serif'],
+      },
       keyframes: {
         fadeInUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },

@@ -21,39 +21,39 @@ export default function SpotFinder() {
   const spots: Spot[] = [
     {
       id: '1',
-      name: 'Skatepark République',
-      location: 'Paris 11e',
+      name: 'Venice Beach Skatepark',
+      location: 'Los Angeles, USA',
       type: 'skatepark',
       level: 'all',
-      rating: 4.7,
-      features: ['Bowl', 'Street course', 'Éclairage', 'Parking'],
-      openTime: '8h - 22h',
-      image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '2.3 km'
+      rating: 4.8,
+      features: ['Bowl', 'Street course', 'Vue sur l\'océan'],
+      openTime: '8h - 21h',
+      image: 'https://images.unsplash.com/photo-1583512603706-2e5e7b17f2ad?auto=compress&cs=tinysrgb&w=600',
+      distance: '—'
     },
     {
       id: '2',
-      name: 'Spot des Invalides',
-      location: 'Paris 7e',
-      type: 'street',
+      name: 'Burnside Skatepark',
+      location: 'Portland, USA',
+      type: 'bowl',
       level: 'intermediate',
-      rating: 4.2,
-      features: ['Marches', 'Rails', 'Ledges', 'Plaza'],
-      openTime: '24h/24',
-      image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '4.1 km'
+      rating: 4.7,
+      features: ['DIY park', 'Coping métal', 'Abrité'],
+      openTime: '8h - 22h',
+      image: 'https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=compress&cs=tinysrgb&w=600',
+      distance: '—'
     },
     {
       id: '3',
-      name: 'Bowl de Bercy',
-      location: 'Paris 12e',
-      type: 'bowl',
+      name: 'MACBA',
+      location: 'Barcelone, Espagne',
+      type: 'street',
       level: 'advanced',
-      rating: 4.9,
-      features: ['Bowl profond', 'Transitions', 'Coping', 'Vestiaires'],
-      openTime: '9h - 19h',
-      image: 'https://images.pexels.com/photos/1619654/pexels-photo-1619654.jpeg?auto=compress&cs=tinysrgb&w=600',
-      distance: '6.7 km'
+      rating: 4.6,
+      features: ['Ledges', 'Plaza mythique', 'Spot urbain'],
+      openTime: '24h/24',
+      image: 'https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?auto=compress&cs=tinysrgb&w=600',
+      distance: '—'
     }
   ];
 

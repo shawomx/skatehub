@@ -9,6 +9,7 @@ interface Board {
   level: string;
   price: string;
   image: string;
+  link: string;
   features: string[];
   rating: number;
 }
@@ -21,35 +22,38 @@ export default function BoardSelector() {
   const boards: Board[] = [
     {
       id: '1',
-      name: 'Street Master Pro',
+      name: 'Element Section 8.0"',
       size: '8.0"',
       style: 'street',
       level: 'intermediate',
-      price: '89€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['7 plis d\'érable', 'Concave moyen', 'Pop excellent'],
+      price: '70€',
+      image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=compress&cs=tinysrgb&w=400',
+      link: 'https://www.skatedeluxe.com/fr/element-section-8-0-skateboard-deck',
+      features: ['7 plis érable', 'Concave moyen', "Graphisme Element"],
       rating: 4.8
     },
     {
       id: '2',
-      name: 'Cruiser Paradise',
-      size: '8.75"',
+      name: 'Globe Blazer Cruiser',
+      size: '7.75"',
       style: 'cruiser',
       level: 'beginner',
-      price: '65€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['Roues souples', 'Roulements ABEC-7', 'Design rétro'],
-      rating: 4.5
+      price: '120€',
+      image: 'https://images.unsplash.com/photo-1495555687392-2874e94b7445?auto=compress&cs=tinysrgb&w=400',
+      link: 'https://shop.globebrand.com/products/blazer-cruiser-skateboard',
+      features: ['Roues souples', 'Trucks Tensor', 'Shape compact'],
+      rating: 4.6
     },
     {
       id: '3',
-      name: 'Vert Destroyer',
-      size: '8.5"',
-      style: 'vert',
+      name: 'Santa Cruz Screaming Hand 8.25"',
+      size: '8.25"',
+      style: 'street',
       level: 'advanced',
-      price: '120€',
-      image: 'https://images.pexels.com/photos/163491/bike-mountain-bike-wheel-valve-163491.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['Shape classique', 'Concave profond', 'Nose & tail longs'],
+      price: '80€',
+      image: 'https://images.unsplash.com/photo-1598515213508-9088f06f2999?auto=compress&cs=tinysrgb&w=400',
+      link: 'https://www.nhsfunfactory.com/santa-cruz-screaming-hand-8-25-deck',
+      features: ['Construction Powerply', 'Concave haut', 'Artwork légendaire'],
       rating: 4.9
     }
   ];
@@ -159,10 +163,15 @@ export default function BoardSelector() {
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-orange-500">{board.price}</span>
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
-                  Choisir
-                </button>
+                <span className="text-2xl font-bold text-red-500">{board.price}</span>
+                <a
+                  href={board.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Acheter
+                </a>
               </div>
             </div>
           </div>
